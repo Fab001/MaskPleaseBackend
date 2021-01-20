@@ -10,7 +10,7 @@ const computerVisionClient = new ComputerVisionClient(new ApiKeyCredentials({ in
 const { QueueServiceClient } = require("@azure/storage-queue");
 const connStr = "";
 const queueServiceClient = QueueServiceClient.fromConnectionString(connStr);
-const queueName = "codamaskplease";
+
 
 
 //Autenticazione CosmosDB
