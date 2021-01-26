@@ -1,18 +1,18 @@
 const { QueueServiceClient } = require("@azure/storage-queue");
-const connStr = "";
+const connStr = process.env["AzureWebJobsStorage"];
 const queueServiceClient = QueueServiceClient.fromConnectionString(connStr);
 
 
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+
+    context.log('****** GET STATUS ****** ');
 
     const idreq = (req.query.idreq || (req.body && req.body.idreq));
-    context.log('Token ricevuto: '+idreq);
-
+    context.log('Token received: '+idreq);
 
     const queueName = idreq;
 
-    // Verifica messaggi in coda
+    // Check Messages
     try{
         const queueClient = queueServiceClient.getQueueClient(queueName);
         const response = await queueClient.receiveMessages();
@@ -21,10 +21,10 @@ module.exports = async function (context, req) {
             const receivedMessageItem = response.receivedMessageItems[0];
             context.log(`Processing & deleting message with content: ${receivedMessageItem.messageText}`);
             
-           let isMask = 300;
-            if(receivedMessageItem.messageText == "Mascherina non trovata :(") isMask = 200;
-            if(receivedMessageItem.messageText == "Mascherina OK") isMask = 201;
-
+            let isMask = 300;
+            if(receivedMessageItem.messageText == "NO MASK") isMask = 200;
+            if(receivedMessageItem.messageText == "OK MASK") isMask = 201;
+            
             const deleteMessageResponse = await queueClient.deleteMessage(
             receivedMessageItem.messageId,
             receivedMessageItem.popReceipt
@@ -39,7 +39,6 @@ module.exports = async function (context, req) {
             };
 
         }
-            //elimina la coda
             await queueClient.delete();
 
 
@@ -47,7 +46,7 @@ module.exports = async function (context, req) {
     catch(err) {
         context.res = {
             status: 300,
-            body: "Riprova più tardi .. (o errore)"
+            body: "No messages ready ..."
         };
     }
 
