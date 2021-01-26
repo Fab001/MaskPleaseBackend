@@ -1,11 +1,13 @@
 //CosmosDB
 const { CosmosClient } = require("@azure/cosmos");
-const endpoint = "https://cosmosmask.documents.azure.com:443/";
-const key = "";
+const endpoint = process.env["endpointCosmos"];
+const key = process.env["keyCosmos"];
 const clientDB = new CosmosClient({ endpoint, key });
 
+
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+   
+   context.log('****** GET_NUM_MASK ****** ');
 
     //CosmosDB
     const { database } = await clientDB.databases.createIfNotExists({ id: "DBmaskplease" });
@@ -26,22 +28,19 @@ module.exports = async function (context, req) {
 
     if(resources.length == 0){
         context.res = {
-            // status: 200, /* Defaults to 200 */
+            status: 200, 
             body: 0
         };
     }else{
         for (const o of resources) {
-            context.log(`${o.id},${o.numMask}, ${o.date} pescato `);
+            context.log(`${o.id},${o.numMask}, ${o.date} item catched `);
             context.res = {
-                status: 200, /* Defaults to 200 */
+                status: 200, 
                 body: o.numMask
             };
             break;
 
         }
     }
-
-
-
 
 }
