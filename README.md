@@ -1,7 +1,7 @@
 # MaskPleaseGame
 MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, adottando le logiche della Gamification.
 
-<p align="center"><img src="./images/ISISLabHelpDeskLogo.png" width="300"/></p>
+<p align="center"><img src="./img/photo5837097972922430795.jpg" width="300"/></p>
 
 MaskPleaseChallenge fornisce le seguenti funzionalità:
 
