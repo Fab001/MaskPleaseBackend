@@ -97,7 +97,8 @@ Scaricare l'apk di MaskPleaseGame al seguente [link](https://github.com/Fernet97
 
 
 **Authors**
-ISISLab - Università degli Studi di Salerno
 - Pierluigi Liguori
 - Fabiano Priore
+
+Università degli Studi di Salerno
 
