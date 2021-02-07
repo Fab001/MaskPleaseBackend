@@ -50,10 +50,10 @@ Quando la risorsa è correttamente installata, andare alla risorsa.
 3. Nel menu laterale scegliere 'Overview' e cliccare su 'Container', creare un nuovo Container con il nome 'public' e per 'Public access level' selezionare 'Container'.
 
 ### Cognitive Services
-[Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati i seguenti Azure Cognitive Services di tipo Vision: 
--Computer Vision
--Face
-Utilizzo del portale di Azure:
+[Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati i seguenti Azure Cognitive Services di tipo Vision. 
+-Computer Vision.
+-Face.
+Utilizzo del portale di Azure.
 1. Creare una nuova risorsa urilizzando la barra di ricerca e cercare 'Storage account'.
 
 ### Cosmos DB
