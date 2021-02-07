@@ -52,10 +52,10 @@ Utilizzo del portale di Azure:
 
 ### Cognitive Services
 [Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati i seguenti Azure Cognitive per rilevare la mascherina al volto:<br/>
-# Face API
+#### Face API
 Rileva e identifica persone ed emozioni nelle immagini. Inoltre, è in grado di riconoscere accessori come la mascherina, motivo per il quale è stato utilizzata
  Dal portale Azure fare click su "Create new Resource" e cercare "Face". Proseguire con i passaggi indicati.<br/>
-# Computer Vision
+#### Computer Vision
  Descrive il contenuto delle immagini che analizza. Viene eseguito nel caso Face dovesse fallire con il riconoscimento del viso, Vision è l'ultima risorsa per la detection della sola mascherina.  
  Dal portale Azure fare click su "Create new Resource" e cercare "Computer Vision". Proseguire con i passaggi indicati.
 
