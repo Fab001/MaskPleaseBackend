@@ -1,6 +1,5 @@
 # MaskPleaseGame
-ISISLabHelpDesk is a chat bot created for all [ISISLab](https://www.isislab.it/) members in order to support them in their activities.
-ISISLabHelpDesk is based on [Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service), a Cloud service available on [Microsoft Azure](https://azure.microsoft.com/it-it/) that provides all the required tools to build and deploy intelligent bots integrating them with all the others Azure services.
+MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, adottando le logiche della Gamification.
 
 <p align="center"><img src="./images/ISISLabHelpDeskLogo.png" width="300"/></p>
 
@@ -9,10 +8,13 @@ MaskPleaseChallenge fornisce le seguenti funzionalità:
 - notifica sul cellulare che ricorda di portare la mascherina;
 - assegnazione punti reputazione se utente invia foto con mascherina dopo uscita di casa;
 - condivisione dei propri punti reputazione con altri utenti;
-- visualizzazione motivazionale sul numero di mascherine indossate globalmente.
+- visualizzazione del numero di mascherine indossate globalmente.
 
-Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare [Cognitive Services] ed altri servizi di Azure per sviluppare un'app android.
-Questo tutorial mostra anche come testare l'app e fare l'host del codice in Azure.
+Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare le potenzialità dei servizi di Azure per sviluppare un'app android.
+Il tutorial mostra anche come fare l'host del codice in Azure.
+
+#### Architettura
+ladksdpsèdsèflsflsf
 
 #### Struttura del tutorial
 
@@ -24,7 +26,6 @@ Questo tutorial mostra anche come testare l'app e fare l'host del codice in Azur
 ## Prerequisiti
 - [An Azure Subscription](https://portal.azure.com/)
 - Node.js
-- [Azure CLI](https://docs.microsoft.com/it-it/cli/azure/install-azure-cli)
 
 ## Installazione
 Questo tutorial è progettato per essere eseguito su un sistema operativo basato su Linux ma può essere facilmente riprodotto su un sistema Windows con piccole modifiche.
