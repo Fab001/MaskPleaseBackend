@@ -12,6 +12,7 @@ MaskPleaseChallenge fornisce le seguenti funzionalità:
 
 ## Architettura
 Aladksdpsèdsèflsflsf
+<p align="center"><img src="./img/photo5834781246088131707.jpg" width="300"/></p>
 
 
 Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare le potenzialità dei servizi di Azure per sviluppare un'app android.
