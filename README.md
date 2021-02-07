@@ -92,7 +92,7 @@ Quando la risorsa è stata correttamente installata, aprire la risorsa.
 ## Esecuzione
 Per avviare i microservizi Azure, aprire la risorsa Function App dal portale e dalla sezione Overview cliccare su Start.<br/>
 Scaricare l'apk di MaskPleaseGame al seguente [link](https://github.com/Fernet97/MaskPlease/tree/master/android/app/release
-) 
+) e installarlo sul proprio dispositivo Android.
 
 
 
