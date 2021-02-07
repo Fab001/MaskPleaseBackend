@@ -24,7 +24,7 @@ Il tutorial mostra anche come fare l'host del codice in Azure.
 #### Struttura del tutorial
 
 * **[Prerequisiti](#prerequisiti)**
-* **[Configurazione risorse](#resources)**
+* **[Configurazione risorse](#configurazione risorse)**
 * **[Esecuzione](#execution)**
 
 ## Prerequisiti
