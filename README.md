@@ -90,20 +90,11 @@ Quando la risorsa è stata correttamente installata, aprire la risorsa.
 <p align="center"><img src="./img/photo5837100287909804132.jpg" width="750" eigth="750"/></p>
 
 ## Esecuzione
-https://github.com/Fernet97/MaskPlease/tree/master/android/app/release
-1. Zip up the code directory manually. Make sure that you are in the bot's project folder, the one that contains index.js file. Select **ALL** the files and folders before running the command to create the zip file, make sure to include also the _.env_ file that can be hidden, in this case use CTRL+H to show it. If your root folder location is incorrect, the bot will fail to run in the Azure portal.
-2. Open terminal inside the folder
-```sh
-$ az webapp deployment source config-zip --resource-group "<resource-group-name>" --name "<name-of-web-app>" --src "<project-zip-path>"
-```
-3. Wait for the deploy, it might take a while.
+Per avviare i microservizi Azure, aprire la risorsa Function App dal portale e dalla sezione Overview cliccare su Start.<br/>
+Scaricare l'apk di MaskPleaseGame al seguente [link](https://github.com/Fernet97/MaskPlease/tree/master/android/app/release
+) 
 
-#### [Deploy on Microsoft Teams](https://docs.microsoft.com/en-us/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0)
-Go to the Bot Channels Registration resource using the Azure Portal.
-1. In the lateral menu choose 'Channels'.
-2. Select the Microsoft Teams icon in 'Add a feature channel' section to create a new channels for Microsoft Teams.
-3. Close the created channel and return in 'Channels' page. Click on 'Microsoft Teams', that will open a conversation with the bot inside Microsoft Teams app.
-**The might take a while to be ready**
+
 
 **Authors**
 ISISLab - Università degli Studi di Salerno
