@@ -23,7 +23,7 @@ Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare le potenzia
 Il tutorial mostra anche come fare l'host del codice in Azure.
 #### Struttura del tutorial
 
-* **[Prerequisiti](#prerequisites)**
+* **[Prerequisiti](#prerequisiti)**
 * **[Configurazione risorse](#resources)**
 * **[Esecuzione](#execution)**
 
