@@ -11,13 +11,6 @@ MaskPleaseChallenge fornisce le seguenti funzionalità:
 - condivisione dei propri punti reputazione con altri utenti;
 - visualizzazione motivazionale sul numero di mascherine indossate globalmente.
 
-The figure below shows:
-
-- the platforms that the user can use to interact with the chatbot;
-- the services used to realize the bot and their interaction.
-
-<p align="center"><img src="./images/bot_services.png"/></p>
-
 Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare [Cognitive Services] ed altri servizi di Azure per sviluppare un'app android.
 Questo tutorial mostra anche come testare l'app e fare l'host del codice in Azure.
 
@@ -34,22 +27,19 @@ Questo tutorial mostra anche come testare l'app e fare l'host del codice in Azur
 - [Azure CLI](https://docs.microsoft.com/it-it/cli/azure/install-azure-cli)
 
 ## Installazione
-This tutorial is designed to be runned on a Linux-based OS but it can be easily reproduced on a Windows/OS system with minor changes.
-Clone the repository and install all the required packages.
+Questo tutorial è progettato per essere eseguito su un sistema operativo basato su Linux ma può essere facilmente riprodotto su un sistema Windows con piccole modifiche.
 ```sh
 $ npm install
 ```
 
 ## Risorse
-In questa sezione viene proposto un tutorial per la creazione di tutte
-Based on [Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service) ISISLabHelpDesk utilises some resources on Microsoft Azure to run, furthermore the available functionalities exploit several Azure services that are connected to the bot using specific credentials.
-In this section a tutorial for the creation of all the required Azure resources is proposed, both the [Portal](https://portal.azure.com) and the Azure CLI will be used. In order to maintain the cost low as much as possible will be chosen the free tier when available.
+In questa sezione viene proposto un tutorial per la creazione di tutte le risorse Azure richieste, usando il portale di Azure. Al fine di mantenere il costo il più basso possibile verrà scelto il piano gratuito quando disponibile.
 
-**REMINDER** Every resource on Cloud needs some deployment time that in some cases can be quite long, be patient.
+**PROMEMORIA** Ogni risorsa su Cloud necessita di un tempo di implementazione che in alcuni casi può essere piuttosto lungo, sii paziente.
 
 ### Resource Group
-First thing first an Azure Resource Group is required, this is pretty straightforward to do using the Azure Portal and can also be done dinamically while creating the first resource.
-**ATTENTION** The selected region must be the same for all the remaining resources.
+Per prima cosa è necessario un Azure Resource Group, che è abbastanza semplice da creare tramite portale di Azure.
+**ATTENZIONE** La regione selezionata deve essere la stessa per tutte le risorse rimanenti.
 
 ### Bot Channels Registration
 [Bot Channels Registration](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-4.0) allows to register a bot in Microsoft Azure Portal with the Azure Bot Service. 
