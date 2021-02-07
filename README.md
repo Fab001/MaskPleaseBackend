@@ -10,12 +10,12 @@ MaskPleaseChallenge fornisce le seguenti funzionalità:
 - condivisione dei propri punti reputazione con altri utenti;
 - visualizzazione del numero di mascherine indossate globalmente.
 
-Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare le potenzialità dei servizi di Azure per sviluppare un'app android.
-Il tutorial mostra anche come fare l'host del codice in Azure.
-
 ## Architettura
 Aladksdpsèdsèflsflsf
 
+
+Questo tutorial ha lo scopo di mostrare come sia possibile sfruttare le potenzialità dei servizi di Azure per sviluppare un'app android.
+Il tutorial mostra anche come fare l'host del codice in Azure.
 #### Struttura del tutorial
 
 * **[Prerequisiti](#prerequisites)**
