@@ -24,7 +24,7 @@ Il tutorial mostra anche come fare l'host del codice in Azure.
 #### Struttura del tutorial
 
 * **[Prerequisiti](#prerequisiti)**
-* **[Configurazione](#configurazione risorse)**
+* **[Configurazione](#configurazione)**
 * **[Esecuzione](#esecuzione)**
 
 ## Prerequisiti
@@ -32,7 +32,7 @@ Il tutorial mostra anche come fare l'host del codice in Azure.
 - Node.js
 
 
-## Configurazione risorse
+## Configurazione
 In questa sezione viene proposto un tutorial per la creazione di tutte le risorse Azure richieste, usando il portale di Azure. Al fine di mantenere il costo il più basso possibile verrà scelto il piano gratuito quando disponibile.
 
 **PROMEMORIA** Ogni risorsa su Cloud necessita di un tempo di implementazione che in alcuni casi può essere piuttosto lungo, sii paziente.
