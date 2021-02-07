@@ -1,9 +1,12 @@
 # MaskPleaseGame
-MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, adottando le logiche della Gamification.
-A tal proposito introduciamo il concetto di RepuScore. In cosa consiste? Se, uscendo di casa, viene scattato una selfie con la mascherina indossata entro 15 minuti.
-
-Il menu Photo sarò sbloccato solamente quando vi è un effettivo spostamento: in tal caso potrai accedervi con un Tap dalla scheramata principale o alternativamente pigiando la notifica di avviso appena apparsa.
-Repuscore un punteggio che misura il tuo senso civico. Il tuo obiettivo consiste nel mantenerlo il più alto possibile. Come? Semplicemente scattando un selfie mentre indossi la mascherina appena esci di casa: l'intelligenza artificiale la riconoscerà e ti assegnerà dei RepuPoint. Non dimenticare di farlo altrimenti il tuo RepuScore inizierà a scendere!
+MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, 
+adottando le logiche della Gamification. A tal proposito si introduce il concetto di RepuScore:
+È un punteggio che misura il tuo senso civico; il tuo obiettivo consiste nel mantenerlo il più alto possibile, ma come?
+Semplicemente scattando un selfie mentre indossi la mascherina appena esci di casa: l'intelligenza artificiale la 
+riconoscerà e ti assegnerà dei RepuPoint. Non dimenticare di farlo altrimenti il tuo RepuScore inizierà a scendere!<br/>
+Il menu Photo sarò sbloccato solamente quando vi è un effettivo spostamento: 
+in tal caso potrai accedervi con un Tap dalla scheramata principale o alternativamente pigiando 
+la notifica di avviso appena apparsa.
 
 <p align="center"><img src="./img/photo5837097972922430795.jpg" width="300"/></p>
 
