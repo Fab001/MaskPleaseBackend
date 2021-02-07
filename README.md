@@ -79,7 +79,7 @@ Quando la risorsa è stata correttamente installata, aprire la risorsa.
 7. Aprire la Power Shell di Kudu e sostiture il contenuto di C:\home\site\wwwroot\package.json con quello di package.json di questo repository.
 9. Eseguire dalla Power Shell "npm install"
 
-<p align="center"><img src="./img/photo5837100287909804132.jpg" width="650" eigth="650"/></p>
+<p align="center"><img src="./img/photo5837100287909804132.jpg" width="750" eigth="750"/></p>
 
 #### Esecuzione
 1. Zip up the code directory manually. Make sure that you are in the bot's project folder, the one that contains index.js file. Select **ALL** the files and folders before running the command to create the zip file, make sure to include also the _.env_ file that can be hidden, in this case use CTRL+H to show it. If your root folder location is incorrect, the bot will fail to run in the Azure portal.
