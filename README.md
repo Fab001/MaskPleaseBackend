@@ -89,7 +89,8 @@ Quando la risorsa è stata correttamente installata, aprire la risorsa.
 
 <p align="center"><img src="./img/photo5837100287909804132.jpg" width="750" eigth="750"/></p>
 
-#### Esecuzione
+## Esecuzione
+https://github.com/Fernet97/MaskPlease/tree/master/android/app/release
 1. Zip up the code directory manually. Make sure that you are in the bot's project folder, the one that contains index.js file. Select **ALL** the files and folders before running the command to create the zip file, make sure to include also the _.env_ file that can be hidden, in this case use CTRL+H to show it. If your root folder location is incorrect, the bot will fail to run in the Azure portal.
 2. Open terminal inside the folder
 ```sh
