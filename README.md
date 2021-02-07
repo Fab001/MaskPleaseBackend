@@ -50,9 +50,13 @@ Quando la risorsa è correttamente installata, andare alla risorsa.
 3. Nel menu laterale scegliere 'Overview' e cliccare su 'Container', creare un nuovo Container con il nome 'public' e per 'Public access level' selezionare 'Container'.
 
 ### Cognitive Services
-[Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati due Azure Cognitive Services di tipo Vision: Computer Vision e Face.
-Utilizzo del portale di Azure:
-1. Creare una nuova risorsa urilizzando la barra di ricerca e cercare 'Storage account'.
+[Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati i seguenti Azure Cognitive per rilevare la mascherina al volto: 
+-Face API
+Rileva e identifica persone ed emozioni nelle immagini. Inoltre, è in grado di riconoscere accessori come la mascherina, motivo per il quale è stato utilizzata
+ Dal portale Azure fare click su "Create new Resource" e cercare "Face". Proseguire con i passaggi indicati.
+-Computer Vision
+ Descrive il contenuto delle immagini che analizza. Viene eseguito nel caso Face dovesse fallire con il riconoscimento del viso, Vision è l'ultima risorsa per la detection della sola mascherina.  
+ Dal portale Azure fare click su "Create new Resource" e cercare "Computer Vision". Proseguire con i passaggi indicati.
 
 ### Cosmos DB
 [CosmosDB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) è un database NoSQL offerto dai servizi Azure per lo sviluppo di app moderne, offrendo tempi di risposta veloci e scalabilità automatica.
