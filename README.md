@@ -43,15 +43,12 @@ Per prima cosa è necessario un Azure Resource Group, che è abbastanza semplice
 
 
 ### Storage Account
-[Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) è il servizio di Azure che consente di archiviare ogni tipo di oggetto dati. Lo utilizziamo per memorizzare temporaneamente le foto contententi persone che indossano la mascherina.
+[Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) è il servizio di Azure che consente di archiviare ogni tipo di oggetto dati. 
+E'stato utilizzato per memorizzare temporaneamente le foto contententi persone che indossano la mascherina.
 Utilizzo del portale di Azure:
 1. Creare una nuova risorsa urilizzando la barra di ricerca e cercare 'Storage account'.
 2. Fornire i dettagli per Subscription, Resource Group, nome e Location. 
-4. Lasciare i campi rimanenti come da default.
-Quando la risorsa è correttamente installata, andare alla risorsa.
-1. Nel menu laterale scegliere 'Access keys' e copiare il campo 'Connection string' salvandolo nel file _.env_ nel campo `SAConnectionString`.
-2. Inserire il nome dello Storage account, situato nell'angolo in alto a sinistra, nel file _.env_ nel campo `StorageAccountName`.
-3. Nel menu laterale scegliere 'Overview' e cliccare su 'Container', creare un nuovo Container con il nome 'public' e per 'Public access level' selezionare 'Container'.
+3. Lasciare i campi rimanenti come da default.
 
 ### Cognitive Services
 [Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati i seguenti Azure Cognitive per rilevare la mascherina al volto:<br/>
