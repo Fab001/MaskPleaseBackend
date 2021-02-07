@@ -1,5 +1,9 @@
 # MaskPleaseGame
 MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, adottando le logiche della Gamification.
+A tal proposito introduciamo il concetto di RepuScore. In cosa consiste? Se, uscendo di casa, viene scattato una selfie con la mascherina indossata entro 15 minuti.
+
+Il menu Photo sarò sbloccato solamente quando vi è un effettivo spostamento: in tal caso potrai accedervi con un Tap dalla scheramata principale o alternativamente pigiando la notifica di avviso appena apparsa.
+Repuscore un punteggio che misura il tuo senso civico. Il tuo obiettivo consiste nel mantenerlo il più alto possibile. Come? Semplicemente scattando un selfie mentre indossi la mascherina appena esci di casa: l'intelligenza artificiale la riconoscerà e ti assegnerà dei RepuPoint. Non dimenticare di farlo altrimenti il tuo RepuScore inizierà a scendere!
 
 <p align="center"><img src="./img/photo5837097972922430795.jpg" width="300"/></p>
 
@@ -11,7 +15,7 @@ MaskPleaseGame fornisce le seguenti funzionalità:
 - visualizzazione del numero di mascherine indossate globalmente.
 
 ## Architettura
-La seguente figura mostra l'architettura adottata:
+L’utente carica una foto, in cui indossa la mascherina, all’interno del Blob Storage, il quale memorizza l’immagine dandole un nome univoco . Quindi, una volta caricata l’immagine all’interno del BlobStorage si attiva il trigger della funzione BlobTrigger e viene eseguito il codice al suo interno. Essa invia l’immagine ricevuta ai servizi Computer Vision e Face, i quali analizzano l immagine e rispondono alla funzione in modo affermativo o negativo a secondo che nella foto sia presente o meno una persona con mascherina. In caso affermativo incrementa poi il numero di mascherine indossate globalmente in quella data collegandosi con il servizio di Cosmos DB, in particolare API SQL. Dopodichè, tale funzione invia un messaggio contentente “Mascherina OK” o “Mascherina NO” alla coda. Entra poi in gioco la funzione getStatus, la quale viene chiamata tramite polling http lato client e che recupera il messaggio all’interno della coda per poi fornire una risposta al client. Infine troviamo la function gectNumMasks chiamata dal client, che recupera il numero di mascherine indossate in data odierna e restituisce il dato al client.
 <p align="center"><img src="./img/photo5834781246088131707.jpg" width="650" eigth="650"/></p>
 
 
@@ -60,8 +64,12 @@ Rileva e identifica persone ed emozioni nelle immagini. Inoltre, è in grado di 
 
 ### Cosmos DB
 [CosmosDB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) è un database NoSQL offerto dai servizi Azure per lo sviluppo di app moderne, offrendo tempi di risposta veloci e scalabilità automatica.
+Cosmos DB mantiene json che tengono traccia del numero di mascherine totali indossate dagli utenti giorno per giorno.
 Utilizzo del portale di Azure:
-1. Creare una nuova risorsa utilizzando la barra di ricerca e cercare 'Storage account'.
+1. Creare una nuova risorsa utilizzando la barra di ricerca e cercare 'Azure Cosmos DB'.
+2. Specificare "serverless" per la voce "Capacity mode".
+3. Settare "Core(SQL)" per la voce "API".
+4. Confermare la creazione della risorsa.
 
 ### Function App
 [Azure Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) è il servizio Serverless Computing offerto da Azure che permette di eseguire blocchi di codice denominati <<function>>.
