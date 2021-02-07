@@ -1,4 +1,4 @@
-# MaskPleaseChallenge
+# MaskPleaseGame
 ISISLabHelpDesk is a chat bot created for all [ISISLab](https://www.isislab.it/) members in order to support them in their activities.
 ISISLabHelpDesk is based on [Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service), a Cloud service available on [Microsoft Azure](https://azure.microsoft.com/it-it/) that provides all the required tools to build and deploy intelligent bots integrating them with all the others Azure services.
 
@@ -41,18 +41,6 @@ In questa sezione viene proposto un tutorial per la creazione di tutte le risors
 Per prima cosa è necessario un Azure Resource Group, che è abbastanza semplice da creare tramite portale di Azure.
 **ATTENZIONE** La regione selezionata deve essere la stessa per tutte le risorse rimanenti.
 
-### Bot Channels Registration
-[Bot Channels Registration](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-4.0) allows to register a bot in Microsoft Azure Portal with the Azure Bot Service. 
-1. Create a new resource and using the search bar find 'Bot Channels Registration'.
-2. Give the bot a name, this name will be showed on Microsoft Teams, Discord, etc.
-3. Provide the details for the Subscription, Resource Group (if you don't have one, here you can create a new one), and Location. 
-4. Choose the 'Princing tier' F0 (Free).
-5. Leave all the others fields as default and press Create.
-When the resource is been correctly deployed go to resource.
-1. In the lateral menu choose 'Settings'.
-2. Search for the 'Microsoft App ID', copy it and save it in the file *.env* in the main folder of the project in `MicrosoftAppId` field. ***ATTENTION*** The file can be hidden, press CTRL+H to see it.
-3. Click on 'Manage' next to the 'Microsoft App ID' field and click on 'New client secret' bottom.
-4. Save the value field of the created key in the file _.env_ in `MicrosoftAppPassword` field.
 
 ### Language Understanding
 [Language Understanding (LUIS)](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/what-is-luis) is a cloud-based conversational AI service that applies custom machine-learning intelligence to text to predict overall meaning. Using LUIS applications are able to understand what a person wants analyzing inputs provided in natural language.
@@ -77,28 +65,25 @@ login with your Azure account and select the newly created Authoring resource.
 7. Click on 'Train' to train the model and then publish it selecting 'Production Slot'.
 
 ### Function App
-[Azure Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) is the Serverless Computing service offered by Azure that allows to run blocks of code called function.
-ISISLabHelpDesk uses a function to send the reservation email that contains all the user's input.
-Using the Azure Portal.
-1. Create a new resource and using the search bar find 'Function App'.
-2. Provide the details for the Subscription, Resource Group and the name. 
-3. Select Node.js as 'Runtime stack', choose the Region and leave the remaining fields as default.
-When the resource is been correctly deployed go to resource.
-1. In the lateral menu choose 'Functions' and create a new function using the button 'Add'.
-2. Select the 'Template HTTP trigger' and insert a name for the function.
-3. The Portal will redirect you automaticaly in the function page, click on 'Get Function URL'. copy the URL and save it in the file _.env_ in `FunctionEndpoint` field.
+[Azure Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) è il servizio Serverless Computing offerto da Azure che permette di eseguire blocchi di codice denominati <<function>>.
+Essendo la nostra architettura di completa natura serverless, utilizziamo 3 functions che gestiscono la logica di back-end.
+1. Creare una nuova risorsa utilizzando la barra di ricerca e cercare 'Function App'.
+2. Fornire i dettagli per Subscription, Resource Group e nome. 
+3. Selezionare Node.js come 'Runtime stack', scegliere la Regione e lasciare i restanti campi come da default.
+Quando la risorsa è stata correttamente installata, aprire la risorsa.
+1. Nel menu laterale scegliere 'Functions' e creare una nuova function usando il bottone 'Add'.
+2. Selezionare il 'Template HTTP trigger' e inserire un nome per la function.
+3. Il Portale reindirizzerà automaticamente nella pagina della function , clicca su 'Get Function URL'. copia l' URL e salvalo nel file _.env_ nel campo `FunctionEndpoint`.
 4. In the lateral menu of the same page choose 'Code+test', replace the code with the one inside the file sendMailFunction.js in the servicesResources folder and save.
-**ATTENTION** Remember to modify the email addresses inside the code with your GMail address and the destination address (Lines 7-8 and 17-18).
-5. Go to `https://<FunctionAppName>.scm.azurewebsites.net` and choose 'Debug Console' -> 'CMD'.
+5. Vai su `https://<FunctionAppName>.scm.azurewebsites.net` e scegli 'Debug Console' -> 'CMD'.
 ```sh
 $ cd site/wwwroot
 $ npm install nodemailer
 ```
 
 ### Storage Account
-[Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) is the Azure service that allows to store all kind of data object.
-In ISISLabHelpDesk is needed to manage the upload of the required image for the seminar.
-Using the Azure Portal.
+[Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) è il servizio di Azure che consente di archiviare ogni tipo di oggetto dati. Lo utilizziamo per memorizzare temporaneamente le foto contententi persone che indossano la mascherina.
+Utilizzo del portale di Azure:
 1. Create a new resource and using the search bar find 'Storage account'.
 2. Provide the details for the Subscription, Resource Group, the name and the Location. 
 4. Leave the remaining fields as default.
