@@ -22,8 +22,8 @@ module.exports = async function (context, req) {
             context.log(`Processing & deleting message with content: ${receivedMessageItem.messageText}`);
             
             let isMask = 300;
-            if(receivedMessageItem.messageText == "NO MASK") isMask = 200;
-            if(receivedMessageItem.messageText == "OK MASK") isMask = 201;
+            if(receivedMessageItem.messageText == "NO MASK") isMask = 250;
+            if(receivedMessageItem.messageText == "OK MASK") isMask = 251;
             
             const deleteMessageResponse = await queueClient.deleteMessage(
             receivedMessageItem.messageId,
