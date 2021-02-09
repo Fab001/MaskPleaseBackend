@@ -92,7 +92,6 @@ async function checkFaceAPI(context, url){
 
 module.exports = async function (context, myBlob) {
 
-   context.log('****** BLOB TRIGGER ****** ');
    const urlToProcess = process.env["BlobStorage"]+context.bindingData.blobTrigger;
 
     // SETTING COSMOS DB
