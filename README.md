@@ -1,7 +1,7 @@
 # MaskPleaseGame
 MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, 
 adottando le logiche della Gamification. A tal proposito si introduce il concetto di RepuScore:
-È un punteggio che misura il tuo senso civico; il tuo obiettivo consiste nel mantenerlo il più alto possibile, ma come?
+è un punteggio che misura il tuo senso civico; il tuo obiettivo consiste nel mantenerlo il più alto possibile, ma come?
 Semplicemente scattando un selfie mentre indossi la mascherina appena esci di casa: l'intelligenza artificiale la 
 riconoscerà e ti assegnerà dei RepuPoint. Non dimenticare di farlo altrimenti il tuo RepuScore inizierà a scendere!<br/>
 Il menu Photo sarò sbloccato solamente quando vi è un effettivo spostamento: 
