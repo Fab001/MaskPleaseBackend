@@ -47,8 +47,8 @@ E' necessario che la regione selezionata sia la stessa per tutte le risorse rima
 [Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) è il servizio di Azure che consente di archiviare ogni tipo di oggetto dati. 
 E'stato utilizzato per memorizzare temporaneamente le foto contententi persone che indossano la mascherina.
 Utilizzo del portale di Azure:
-1. Creare una nuova risorsa urilizzando la barra di ricerca e cercare 'Storage account'.
-2. Fornire i dettagli per Subscription, Resource Group, nome e Location. 
+1. Creare una nuova risorsa utilizzando la barra di ricerca e cercare 'Storage account'.
+2. Fornire i dettagli per Subscription, Resource Group, Name e Location. 
 3. Lasciare i campi rimanenti come da default.
 
 ### Cognitive Services
@@ -70,10 +70,10 @@ Utilizzo del portale di Azure:
 4. Confermare la creazione della risorsa.
 
 ### Function App
-[Azure Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) è il servizio Serverless Computing offerto da Azure che permette di eseguire blocchi di codice denominati <<function>>.
-Essendo la nostra architettura di completa natura serverless, utilizziamo 3 functions che gestiscono la logica di back-end.
+[Azure Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) è il servizio Serverless Computing offerto da Azure che permette di eseguire blocchi di codice denominati "function".
+Essendo l' architettura scelta di completa natura serverless, vengono utilizzate 3 functions che gestiscono la logica di back-end.
 1. Creare una nuova risorsa utilizzando la barra di ricerca e cercare 'Function App'.
-2. Fornire i dettagli per Subscription, Resource Group e nome. 
+2. Fornire i dettagli per Subscription, Resource Group e Name. 
 3. Selezionare Node.js come 'Runtime stack', scegliere la Regione e lasciare i restanti campi come da default.
 Quando la risorsa è stata correttamente installata, aprire la risorsa.
 1. Nel menu laterale scegliere 'Functions' e creare una nuova function usando il bottone 'Add'.
