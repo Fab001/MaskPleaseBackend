@@ -7,7 +7,6 @@ const clientDB = new CosmosClient({ endpoint, key });
 
 module.exports = async function (context, req) {
    
-   context.log('****** GET_NUM_MASK ****** ');
 
     //CosmosDB
     const { database } = await clientDB.databases.createIfNotExists({ id: "DBmaskplease" });
