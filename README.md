@@ -38,11 +38,9 @@ Il tutorial mostra anche come fare l'host del codice in Azure.
 ## Configurazione
 In questa sezione viene proposto un tutorial per la creazione di tutte le risorse Azure richieste, usando il portale di Azure. Al fine di mantenere il costo il più basso possibile verrà scelto il piano gratuito quando disponibile.
 
-**PROMEMORIA** Ogni risorsa su Cloud necessita di un tempo di implementazione che in alcuni casi può essere piuttosto lungo, sii paziente.
-
 ### Resource Group
 Per prima cosa è necessario un Azure Resource Group, che è abbastanza semplice da creare tramite portale di Azure.
-**ATTENZIONE** La regione selezionata deve essere la stessa per tutte le risorse rimanenti.
+E' necessario che la regione selezionata sia la stessa per tutte le risorse rimanenti.
 
 
 ### Storage Account
@@ -101,4 +99,3 @@ Scaricare l'apk di MaskPleaseGame al seguente [link](https://github.com/Fernet97
 - Fabiano Priore
 
 Università degli Studi di Salerno
-
