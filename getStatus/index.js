@@ -5,7 +5,6 @@ const queueServiceClient = QueueServiceClient.fromConnectionString(connStr);
 
 module.exports = async function (context, req) {
 
-    context.log('****** GET STATUS ****** ');
 
     const idreq = (req.query.idreq || (req.body && req.body.idreq));
     context.log('Token received: '+idreq);
