@@ -54,9 +54,9 @@ var maskDetected = false;
 
 // Check with Computer Vision 
 async function checkVision(context, url){
-    context.log('Computer Vision image analysis ...');
+        
     const caption = (await computerVisionClient.describeImage(url)).captions[0];
-    context.log(`VISION INFO: This may be ${caption.text} (${caption.confidence.toFixed(2)} confidence)`);
+    
     var descr = caption.text;
     return descr.includes("mask");
 }
@@ -72,15 +72,14 @@ async function checkFaceAPI(context, url){
     }; 
     let singleDetectedFace = await clientFace.face.detectWithUrl(url, options)
         .then((result ) => {
-            context.log("FACE API INFO: The result is: ");
-            context.log(result[0].faceAttributes.accessories); 
+            
             result[0].faceAttributes.accessories.forEach(function(entry) {
                 if(entry.type == "mask"){
                     find =  true;
                 }  
             });
         }).catch((err) => {
-            context.log('No faces detected in single face image:' + url)
+           
             find = false;
         })
 
@@ -96,16 +95,16 @@ module.exports = async function (context, myBlob) {
 
     // SETTING COSMOS DB
     const { database } = await clientDB.databases.createIfNotExists({ id: "DBmaskplease" });
-    context.log(database.id);
+    
     const { container } = await database.containers.createIfNotExists({ id: "MaskXday" });
-    context.log(container.id);
+   
 
 
     //Create client queue
     const queueClient = await createQueue(context.bindingData.blobTrigger); 
 
     if(await checkVision(context, urlToProcess) || await checkFaceAPI(context, urlToProcess)){
-        context.log("OK MASK");
+        
         // send message to queue
         await queueClient.sendMessage("OK MASK");
 
@@ -115,7 +114,7 @@ module.exports = async function (context, myBlob) {
         return;
     }
     else {
-        context.log("NO MASK");
+        
         await queueClient.sendMessage("NO MASK");
         
         }
