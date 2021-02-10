@@ -1,5 +1,5 @@
-# MaskPleaseGame
-MaskPleaseGame è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, 
+# MaskPlease
+MaskPlease è un'applicazione Android ideata per la prevenzione al contagio da Covid-19, 
 adottando le logiche della Gamification. A tal proposito si introduce il concetto di RepuScore:
 è un punteggio che misura il tuo senso civico; il tuo obiettivo consiste nel mantenerlo il più alto possibile, ma come?
 Semplicemente scattando un selfie mentre indossi la mascherina appena esci di casa: l'intelligenza artificiale la 
@@ -10,12 +10,12 @@ la notifica di avviso appena apparsa.
 
 <p align="center"><img src="./img/photo5837097972922430795.jpg" width="300"/></p>
 
-MaskPleaseGame fornisce le seguenti funzionalità:
+MaskPlease fornisce le seguenti funzionalità:
 
 - Notifica sul cellulare che avvisa di indossare la mascherina quando si è usciti di casa;
 - Assegnazione punti reputazione se l'utente invia una foto con mascherina;
 - Condivisione tramite social dei propri punti reputazione;
-- Visualizzazione del numero di mascherine indossate da tutti gli utenti di MaskPleaseGame nel giorno odierno;
+- Visualizzazione del numero di mascherine indossate da tutti gli utenti di MaskPlease nel giorno odierno;
 
 ## Architettura
 L’utente fa l'upload sul BlobStorage di un selfie con mascherina. Il BlobStorage memorizza l’immagine dandole un nome univoco. Quindi, una volta caricata l’immagine si attiva il trigger della function "BlobTrigger" e viene eseguito il codice al suo interno. Essa invia l’immagine ricevuta ai servizi Computer Vision e Face, i quali la analizzano e rispondono alla function dopo aver verificato la presenza di una mascherina al volto. In caso affermativo incrementa il numero di mascherine indossate da tutti gli utenti in quella data nel Cosmos DB, in particolare API SQL. Dopodichè, tale funzione invia un messaggio contentente “Mascherina OK” o “Mascherina NO” alla coda. Entra poi in gioco la funzione "getStatus", la quale viene chiamata tramite polling http da app Android e recupera il messaggio all'interno della coda per poi fornire una risposta al client. Infine è presente la function "getNumMasks" che recupera il numero di mascherine indossate in data odierna e restituisce il dato al client.
@@ -89,7 +89,7 @@ Quando la risorsa è stata correttamente installata, aprire la risorsa.
 
 ## Esecuzione
 Per avviare i microservizi Azure, aprire la risorsa Function App dal portale e dalla sezione Overview cliccare su Start.<br/>
-Scaricare l'apk di MaskPleaseGame al seguente [link](https://github.com/Fernet97/MaskPlease/tree/master/android/app/release
+Scaricare l'apk di MaskPlease al seguente [link](https://github.com/Fernet97/MaskPlease/tree/master/android/app/release
 ) e installarlo sul proprio dispositivo Android.
 
 
