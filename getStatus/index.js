@@ -7,8 +7,7 @@ module.exports = async function (context, req) {
 
 
     const idreq = (req.query.idreq || (req.body && req.body.idreq));
-    context.log('Token received: '+idreq);
-
+    
     const queueName = idreq;
 
     // Check Messages
@@ -18,7 +17,6 @@ module.exports = async function (context, req) {
         
         if (response.receivedMessageItems.length == 1) {
             const receivedMessageItem = response.receivedMessageItems[0];
-            context.log(`Processing & deleting message with content: ${receivedMessageItem.messageText}`);
             
             let isMask = 300;
             if(receivedMessageItem.messageText == "NO MASK") isMask = 250;
@@ -28,9 +26,7 @@ module.exports = async function (context, req) {
             receivedMessageItem.messageId,
             receivedMessageItem.popReceipt
             );
-            context.log(
-            `Delete message successfully, service assigned request Id: ${deleteMessageResponse.requestId}`
-            );
+
 
             context.res = {
                 status: isMask,
