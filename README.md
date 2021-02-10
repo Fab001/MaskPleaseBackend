@@ -45,7 +45,7 @@ E' necessario che la regione selezionata sia la stessa per tutte le risorse rima
 
 ### Storage Account
 [Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) è il servizio di Azure che consente di archiviare ogni tipo di oggetto dati. 
-E'stato utilizzato per memorizzare temporaneamente le foto contententi persone che indossano la mascherina.
+E' stato utilizzato per memorizzare temporaneamente le foto contententi persone che indossano la mascherina.
 Utilizzo del portale di Azure:
 1. Creare una nuova risorsa utilizzando la barra di ricerca e cercare 'Storage account'.
 2. Fornire i dettagli per Subscription, Resource Group, Name e Location. 
@@ -54,8 +54,7 @@ Utilizzo del portale di Azure:
 ### Cognitive Services
 [Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) è un servizio di Azure che consente di integrare intelligenza cognitiva all'interno di un'applicazione. Nello sviluppo di questa applicazione vengono utilizzati i seguenti Azure Cognitive per rilevare la mascherina al volto:<br/>
 ##### Face API
-Rileva e identifica persone ed emozioni nelle immagini. Inoltre, è in grado di riconoscere accessori come la mascherina, motivo per il quale è stato utilizzata
- Dal portale Azure fare click su "Create new Resource" e cercare "Face". Proseguire con i passaggi indicati.<br/>
+Rileva e identifica persone ed emozioni nelle immagini. Inoltre, è in grado di riconoscere accessori come la mascherina, motivo per il quale è stato utilizzata. Dal portale Azure fare click su "Create new Resource" e cercare "Face". Proseguire con i passaggi indicati.<br/>
 ##### Computer Vision
  Descrive il contenuto delle immagini che analizza. Viene eseguito nel caso Face dovesse fallire con il riconoscimento del viso, Vision è l'ultima risorsa per la detection della sola mascherina.  
  Dal portale Azure fare click su "Create new Resource" e cercare "Computer Vision". Proseguire con i passaggi indicati.
