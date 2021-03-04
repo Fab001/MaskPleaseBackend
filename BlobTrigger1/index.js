@@ -33,7 +33,6 @@ async function createQueue(path){
 async function updateCosmos(container){
     var d = new Date();
     var today = new Date().toISOString().slice(0, 10);
-    var b;
     var queri = "SELECT * FROM c WHERE c.date = '"+today+"'";
 
     const { resources } = await container.items.query(queri).fetchAll();
